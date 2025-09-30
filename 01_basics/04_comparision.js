@@ -14,7 +14,7 @@ console.log(null>=0)
 
 //=== strict equal check type and val
 
-// 1) Primitive Datatypes
+// 1) Primitive Datatypes ==>call by value
 //        Number => number
 //        String  => string
 //        Boolean  => boolean
@@ -23,8 +23,8 @@ console.log(null>=0)
 //        Symbol  =>  symbol
 //        BigInt  =>  bigint
 
-// 2) Non-primitive Datatypes
-//        Arrays  =>  object
-//        Function  =>  function
-//        Object  =>  object
+// 2) Non-primitive Datatypes ==>call by refe
+//        Arrays  =>  object []
+//        Function  =>  function funtion(){}
+//        Object  =>  object {}
 
