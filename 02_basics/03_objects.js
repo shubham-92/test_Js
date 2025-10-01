@@ -1,3 +1,11 @@
+// An object in JavaScript is a non-primitive data
+//  type that allows you to store collections of 
+// keyed data and more complex entities. 
+// It's essentially a container for properties, 
+// where each property has a name (key) and
+//  a value
+
+
 //constructor=>singleton  object.create
 // literals=>not singleton
 
