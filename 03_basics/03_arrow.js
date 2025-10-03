@@ -41,6 +41,6 @@ const user = {
 
 const addTwo = (num1, num2) => (num1+num2) 
 
-// object ko wrap krna hai ( ) isme 
+// object aaye toh usko wrap krna hai ( {} ) isme 
 
 console.log(addTwo(2,3))
