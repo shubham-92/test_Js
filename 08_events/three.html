@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId; // Declare a variable to hold the interval ID, initially undefined
+
+    const sayDate = function(str) {
+        // Function to execute every interval
+        console.log(str, Date.now());
+    };
+
+    // 1. Get the elements
+    const startButton = document.querySelector('#start');
+    const stopButton = document.querySelector('#stop');
+
+    
+    const startChangingText = function() {
+        // Prevent multiple intervals from starting if the button is clicked repeatedly
+        if (!intervalId) {
+            // Start the interval and save its ID to the global variable
+            intervalId = setInterval(sayDate, 1000, "I said 'hi' at:");
+            console.log("Timer started. ID:", intervalId);
+        }
+    };
+
+    
+    const stopChangingText = function() {
+        // Check if an interval is running before attempting to clear it
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null; // Clear the variable so startChangingText can run again
+            console.log("Timer stopped. ID cleared.");
+        }
+    };
+
+    
+    startButton.addEventListener('click', startChangingText);
+    stopButton.addEventListener('click', stopChangingText);
+</script>
+</html>
